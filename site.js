@@ -29,6 +29,9 @@ $(document).ready(function () {
 
 		$('#password').val(password);
 		$('#copy-button-password').attr('data-clipboard-text', password);
+
+		$('#copy-button-all').attr('data-clipboard-text',
+			createParsedConnectionString(protocol, server, port, user, password, connectionString));
 	});
 
 	var clientPort = new ZeroClipboard(document.getElementById("copy-button-port"));
@@ -47,12 +50,26 @@ $(document).ready(function () {
 
 	var hookUpMessage = function (client) {
 		client.on("aftercopy", function(e){
-			$("#copyMessage")
+			$("#message")
 				.html("Copied... paste where you like")
+				.removeClass('hidden')
 				.fadeIn(500)
 				.delay(2000)
 				.fadeOut(500);
 		});
+	};
+
+	var createParsedConnectionString = function (protocol, server, port, user, password, connectionString) {
+		var parts = [
+			"Protocol   : " + protocol,
+			"Server     : " + server,
+			"Port       : " + port,
+			"User       : " + user,
+			"Password   : " + password,
+			" ",
+			"Connection : " + connectionString];
+
+		return parts.join("\n");
 	};
 });
 
