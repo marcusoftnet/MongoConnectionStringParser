@@ -1,0 +1,19 @@
+{
+  "name": "MongoConnectionStringParser",
+  "version": "1.0.0",
+  "description": "A static page to parse out the parts of a MongoDb string",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony app.js"
+  },
+  "keywords": [
+    "mongodb",
+    "connectionstring"
+  ],
+  "author": "Marcus Hammarberg @marcusoftnet",
+  "license": "MIT",
+  "dependencies": {
+    "koa-static": "~1.4.9",
+    "koa": "~0.17.0"
+  }
+}
