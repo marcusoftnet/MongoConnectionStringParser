@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A MongoDb connection string parser">
+    <meta name="author" content="Marcus Hammarberg, @marcusoftnet">
+    <title>MongoDb connection-string parser</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.2/yeti/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <script src="js/ZeroClipboard.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>MongoDb connection string parser</h1>
+            <p class="lead">Beacuse... I simply cannot remember how <a href="http://docs.mongodb.org/manual/reference/connection-string/">that's done</a></p>
+            <p>If you're worried about me stealing your connection, run this offline</p>
+        </div>
+
+        <form class="bs-component">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label class="control-label" for="connectionString">Connectionstring</label>
+                        <input class="form-control input-lg" type="text" placeholder="Type your connectionstring here..." id="connectionString">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="control-label" for="protocol">Protocol</label>
+                        <div class="input-group">
+                            <input class="form-control input" type="text" id="protocol">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="copy-button-protocol">Copy</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="control-label" for="server">Server</label>
+                        <div class="input-group">
+                            <input class="form-control input" type="text" id="server">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="copy-button-server">Copy</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="control-label" for="port">Port</label>
+                        <div class="input-group">
+                            <input class="form-control input" type="text" id="port">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="copy-button-port">Copy</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="control-label" for="user">User</label>
+                        <div class="input-group">
+                            <input class="form-control input" type="text" id="user">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="copy-button-user">Copy</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4">
+                    <div class="form-group">
+                        <label class="control-label" for="password">Password</label>
+                        <div class="input-group">
+                            <input class="form-control input" type="password" id="password">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="copy-button-password">Copy</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <span id="copyMessage" class="lead"></span>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4">
+                    <div class="form-group">
+                        <a href="#" class="btn btn-primary btn-lg" id="copy-button-all" data-clipboard-text="Kalle">Copy all to clipboard</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; <a href="http://marcusoft.net/" target="_blank">Marcus Hammarberg</a>, <a href="http://twitter.com/marcusoftnet">@marcusoftnet</a>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="site.js"></script>
+
+</body>
+
+</html>
